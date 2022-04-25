@@ -21,7 +21,7 @@
     }
 
     .value-text {
-      fill: #14212f;
+      fill: #a4a1af;
       font-weight: 700;
       font-size: 24px;
     }
@@ -34,7 +34,7 @@
 
     &-label {
       font-size: 20px;
-      color: #14212f;
+      color: #a4a1af;
       position: relative;
       bottom: 60px;
     }
@@ -48,7 +48,7 @@
 
     &-img {
       width: 100%;
-      filter: blur(15px);
+      filter: blur(15px) brightness(60%);
     }
   }
 
@@ -61,19 +61,19 @@
   &-header {
     &-title {
       font-size: 70px;
-      color: #14212f;
+      color: #a4a1af;
       font-weight: 700;
       line-height: 70px;
       white-space: nowrap;
     }
 
     &-release-date {
-      color: #14212f;
+      color: #a4a1af;
       font-weight: 700;
     }
 
     &-genres {
-      color: #14212f;
+      color: #a4a1af;
       font-weight: 700;
     }
   }

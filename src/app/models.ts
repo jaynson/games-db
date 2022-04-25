@@ -11,7 +11,7 @@ export interface Game {
   parent_platforms: Array<ParentPlatform>;
   publishers: Array<Publishers>;
   ratings: Array<Rating>;
-  screenshot: Array<Screenshots>;
+  screenshots: Array<Screenshots>;
   trailers: Array<Trailer>;
 }
 
@@ -26,6 +26,7 @@ interface Genre {
 interface ParentPlatform {
   platform: {
     slug: string;
+    name: string;
   };
 }
 

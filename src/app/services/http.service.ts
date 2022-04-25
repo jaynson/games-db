@@ -43,7 +43,7 @@ export class HttpService {
         return {
           ...resp['gameInfoRequest'],
           screenshots: resp['gameScreenshotsRequest']?.results,
-          trailers: resp['gameTrailersRequest']?.results,
+          trailers: resp['gameTrailerRequest']?.results,
         };
       })
     );
