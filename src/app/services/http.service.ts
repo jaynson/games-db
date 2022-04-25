@@ -26,6 +26,7 @@ export class HttpService {
   }
 
   getGameDetails(id: string): Observable<Game> {
+    // Get details for the game and return as Observable
     const gameInfoRequest = this.http.get(`${env.BASE_URL}/games/${id}`);
     const gameTrailerRequest = this.http.get(
       `${env.BASE_URL}/games/${id}/movies`
@@ -40,6 +41,7 @@ export class HttpService {
       gameTrailerRequest,
     }).pipe(
       map((resp: any) => {
+        // Map the screenshots and trailers from api call to the model
         return {
           ...resp['gameInfoRequest'],
           screenshots: resp['gameScreenshotsRequest']?.results,

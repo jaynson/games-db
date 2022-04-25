@@ -7,6 +7,7 @@ import {
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
+/// Injectable Interceptor to handle headers and params as well.
 @Injectable()
 export class HttpHeadersInterceptor implements HttpInterceptor {
   constructor() {}

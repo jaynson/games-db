@@ -4,14 +4,17 @@ import { DetailsComponent } from './components/details/details.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
+  //Route to the home page
   {
     path: '',
     component: HomeComponent,
   },
+  //Route to the homepage after search
   {
     path: 'search/:game-search',
     component: HomeComponent,
   },
+  //Route to Details page with game ID
   {
     path: 'details/:id',
     component: DetailsComponent,

@@ -21,7 +21,13 @@ import { DetailsComponent } from './components/details/details.component';
 import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, HomeComponent, DetailsComponent, GameTabsComponent],
+  declarations: [
+    AppComponent,
+    SearchBarComponent,
+    HomeComponent,
+    DetailsComponent,
+    GameTabsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,6 +41,7 @@ import { GameTabsComponent } from './components/game-tabs/game-tabs.component';
     MatTabsModule,
   ],
   providers: [
+    // Using interceptors to insert headers and params to request at application level rather than each requests made
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpHeadersInterceptor,

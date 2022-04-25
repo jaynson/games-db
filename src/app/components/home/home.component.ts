@@ -45,6 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    // Unsubscribe from routes to prevent potential memory leaks or other issues.
     if (this.gameSub) {
       this.gameSub.unsubscribe();
     }

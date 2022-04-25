@@ -11,7 +11,7 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
   gameRating = 0;
-  gameId: string;
+  gameId: string; // Game ID used to make request to API
   game: Game;
   routeSub: Subscription;
   gameSub: Subscription;
@@ -28,6 +28,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   }
 
   getColor(value: number): string {
+    // Change color of gauge based on score
     if (value > 75) return '#5ee432';
     else if (value > 50) return '#fffa50';
     else if (value > 30) return '#f7aa38';
@@ -40,6 +41,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
       .subscribe((gameResp: Game) => {
         this.game = gameResp;
 
+        // Delay assigning of Metacritic score for cosmetic effect.
         setTimeout(() => {
           this.gameRating = this.game.metacritic;
         }, 1000);
@@ -47,6 +49,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    // Clean up
     if (this.gameSub) {
       this.gameSub.unsubscribe();
     }
